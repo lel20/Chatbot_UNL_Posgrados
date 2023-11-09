@@ -1,0 +1,503 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: #F1F1F1;
+}
+
+*,
+html {
+    --primaryGradient: linear-gradient(93.12deg, #00024b 0.52%, #002f5c 100%);
+    --secondaryGradient: linear-gradient(268.91deg, #dddbdb -2.14%, #ffffff 99.69%);
+    /* --primaryBoxShadow: 0px 10px 15px rgb(255, 255, 255); */
+    --secondaryBoxShadow: 0px -10px 15px rgba(0, 46, 164, 0);
+    --primary: #00024b;
+
+}
+
+/* CHATBOX
+=============== */
+.conta {
+    width: 100%;
+    padding: 30px;
+    position: fixed;
+    height: 100%;
+    z-index: 1;
+    top: 5px;
+}
+.cuerpo{
+    margin: 10px;
+}
+.cuerpo img{
+    width: 500px; ;
+}
+.chatbox {
+    position: relative;
+    margin: 0 auto;
+    z-index: -1;
+    height: 116%;
+    width: 100%;
+    bottom: 30px;
+    top: -5%;
+
+
+}
+
+/* CONTENT IS CLOSE */
+.chatbox__support {
+    display: flex;
+    margin-right: 20px;
+    flex-direction: column;
+    z-index: -2;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+    float: right;
+    
+
+
+}
+
+/* CONTENT ISOPEN */
+.chatbox--active {
+    transform: translateY(0px);
+    z-index: 2;
+    opacity: 100;
+
+}
+
+.boton_cerrar {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    float: right;
+
+}
+
+.cerra {
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 5px;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5rem;
+    position: relative;
+    background: none;
+
+}
+
+/* BUTTON */
+/* .chatbox__button {
+    text-align: right;
+
+} */
+
+.send__button {
+    padding: 6px;
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+
+/* HEADER */
+.chatbox__header {
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    background: rgb(255, 255, 255);
+}
+
+/* Mensajes */
+.chatbox__messages {
+    height: 63%;
+    margin-top: auto;
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: column-reverse;
+}
+
+.messages__item {
+    max-width: 60.6%;
+    width: fit-content;
+}
+
+.messages__item--operator {
+    margin-left: auto;
+}
+
+.messages__item--visitor {
+    margin-right: auto;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    position: relative;
+    bottom: 0;
+    top: 10px;
+}
+
+.chatbox__support {
+    background: #d3e3f0;
+    height: 93%;
+    width: 98%;
+    max-height: 900px;
+    max-width: 600px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+/* HEADER */
+.chatbox__header {
+    background: var(--primaryGradient);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /*justify-content: center; */
+    padding: 10px 20px ;
+    border-top-left-radius: 20px;
+    box-shadow: var(--primaryBoxShadow);
+    top: 0%;
+    height: 18%;
+}
+
+.chatbox__image--header {
+    margin-right: 5px;
+    scale: 80%;
+
+}
+  
+.chatbox__heading--header {
+    font-size: 1.2rem;
+    color: white;
+}
+
+.chatbox__description--header {
+    font-size: .9rem;
+    color: white
+}
+/*encabezado*/
+.encabezado{
+    background-color: #5287b8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 1;
+}
+.encabezado img{
+    width: 20em;
+}
+.encabezado h1{
+    color: #ffffff;
+}
+nav a{
+    color: rgb(255, 255, 255);
+    font-size: larger;
+}
+/* Messages */
+.chatbox__messages {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.messages__item {
+    text-align: justify;
+    font-size: 1.0rem;
+    margin-top: 10px;
+    background: #ffffff;
+    padding: 8px 12px;
+    max-width: 80%;
+    color: rgb(0, 0, 0);
+}
+
+.messages__item--visitor,
+.messages__item--typing {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.messages__item--operator {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: var(--primary);
+    color: white;
+}
+
+/* FOOTER */
+.chatbox__footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    margin-top: 20px;
+    border-bottom: 0;
+
+}
+.enviar{
+    outline: none;
+    width: 100%;
+    height: 90%;
+    border-radius: 6px;
+    border: 2px solid #ffffff;
+    border-bottom: 2px solid #0062b3;
+    font-size: 18px;
+    background-color: tra;
+}
+
+
+.chatbox__button button,
+.chatbox__button button:focus,
+.chatbox__button button:visited {
+    z-index: 6;
+    font-size: 1em;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    margin: 20px;
+    width: 200px;
+    height: 40px;
+    right: 20px;
+    top: 85%;
+    position: fixed;
+    background-color: rgb(5, 136, 0);
+    color: #ffffff;
+    border: none;
+    outline: none;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+ul{
+    margin: 20px;
+}
+li{
+    margin-bottom: 8px;
+}
+.ul1{
+    list-style-type: none;
+    margin: 25px;
+
+}
+.li1{
+    background-color: #dddbdb;
+    border-radius: 5%;
+    margin: 2px;
+    
+
+}
+a{
+    text-decoration: none;
+}
+.chatbox__button button span {
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 6px;
+    margin-right: 10px;
+
+}
+
+.send__button:active {
+    transform: scale(0.85);
+
+}
+
+.chatbox__button button:active {
+    background-color: #00024b;
+    transform: translateY(6px);
+
+}
+
+.send__button img {
+    width: 100%;
+    height: 100%;
+}
+
+.articulos {
+    width: 40%;
+    padding: 30px;
+    position: fixed;
+    display: inline-block;
+    margin: 30px;
+    height: 90%;
+    z-index: -1;
+    background-color: #d3e3f0;
+    opacity: 0;
+    
+}
+
+.articulos--active {
+    transform: translateY(0px);
+    z-index: 2;
+    opacity: 100;
+
+}
+
+
+.texto {
+    width: 95%;
+    position: fixed;
+    height: 90%;
+    overflow-y: scroll;
+
+
+}
+
+.orden {
+    margin: 20px;
+}
+
+.orden1 {
+    margin: 30px;
+}
+
+.encabezado {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 20px;
+    border-top-left-radius: 20px;
+    top: 0%;
+    height: 5%;
+  
+}
+
+.cerrar_encabezado {
+    position: relative;
+    bottom: 0;
+    left: 0%;
+    float: right;
+
+}
+
+.cerrar_encabezado {
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 2px;
+    border: none;
+    font-size: 1.5rem;
+    background: none;
+
+}
+
+.boton__articulos {
+    position: relative;
+    bottom: 0;
+    color: rgb(0, 89, 255);
+    border: none;
+    right: 16%;
+    float: right;
+    background: none;
+    top: 10px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .conta {
+        padding: 0px;
+    }
+
+    .chatbox {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        top: 0%;
+
+    }
+    .cuerpo img{
+        width: 300px; ;
+    }
+
+    .articulos {
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        height: 100%;
+
+    }
+
+    .texto {
+        width: 100%;
+        position: fixed;
+        height: 100%;
+        margin: 7px;
+
+
+
+    }
+
+    .chatbox__support {
+        position: absolute;
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        left: 0;
+        right: 0;
+
+    }
+
+    .chatbox__header {
+
+        border-top-left-radius: 0px;
+
+    }
+
+    .boton_cerrar {
+
+        left: 20%;
+        float: right;
+        
+
+    }
+    .boton__articulos {
+       right: 0%;
+      
+    }
+    .boton__articulos {
+        
+        right: 5%;
+    }
+    .messages__item {
+        font-size: 0.8rem;
+        
+        max-width: 95%;
+        
+    }
+    .encabezado{
+        background-color: #5287b8;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 1;
+    }
+    .encabezado img{
+        width: 8em;
+    }
+    .encabezado h1{
+        font-size: 1rem;
+        color: #ffffff;
+    }
+    nav a{
+        font-weight: 60;
+        color: rgb(255, 255, 255);
+        font-size: larger;
+    }
+}

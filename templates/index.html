@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+
+<head>
+
+
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta charset="utf-8" name="viewport"
+        content="width=device-width, user-scalable=no,initial-scale=1.0,maximun-scale=1.0,minum-scalable">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+
+
+</head>
+
+<body>
+    <div class="encabezado">
+        <img src="/static/images/logo_unl.png" alt="image">
+        <h1>Guía para el uso del Chabot </h1>
+        <nav>
+            <a href="https://computacion.unl.edu.ec/chatpos/" >Posgrados</a>
+        </nav>
+
+    </div>
+    <div class="cuerpo">
+        <h2>Instrucciones</h2>
+        <p>El presente Chatbot tiene como objetivo responder preguntas frecuentes sobre los estudios de cuarto nivel (Posgrados), 
+            principalmente en los temas de matrículas, homologaciones, requisitos para la matrícula, costes, formas de pago, 
+            modalidades de estudio, etc. Para realizar una correcta interacción tiene que seguir los siguientes pasos:
+         </p>
+         <ul>
+            <li>Debe situarse en la pantalla y localizar un botón con el nombre <b>[ Resuelva sus dudas ] </b> y dar clic sobre éste. 
+                Posteriormente se visualizará el despliegue del asistente virtual (Chatbot) el cual mostrará un mensaje de presentación.  
+            </li>
+            <li> El asistente virtual funciona de dos formas: 
+                <ul>
+                    <li>Al momento de realizar la presentación se mostrará un menu compuesto de 10 opciones. En el campo de texto del chatbot tiene
+                        que escribir el valor numérico de la opción o el título y darle a la tecla <b>[ Enter ]</b> o al botón de envío para que 
+                        se muestre una respuesta.
+                    </li>
+                    <img src="/static/images/2.png" alt="image">
+                    <li>La segunda forma consiste en elaborar e ingresar una pregunta que no contenga faltas de ortografía en el campo de texto.
+                    </li>
+                    <img src="/static/images/3.png" alt="image">
+                </ul>
+            </li>
+            <li>No se pueden formular dos preguntas en una misma oración.
+            </li>
+            <li>Si ejecuta el comando <b>[ ayuda ]</b> podrá visualizar todas las sugerencias que el Asistente Virtual puede responder (El comando 
+                también se presentará cuando el chatbot no pueda darle una respuesta).
+            </li>
+            <li>Por favor, tenga en cuenta que el chatbot puede tardar en responder en un intervalo de <b>[ 5 a 7 segundos]</b> tras
+                pulsar el <b>[botón de envío]</b> o la tecla <b>[Enter]</b>
+            </li>
+
+         </ul>
+
+    </div>
+    
+
+    <div class="conta">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="/static/images/logo.png" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">Posgrados UNL</h4>
+                        <p class="chatbox__description--header">Chatbot</p>
+
+                    </div>
+                    <div class="boton_cerrar">
+                        <button class="cerra" onclick="mostrar();"> X
+
+                        </button>
+
+
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div class="row">
+                        
+                        <div class="col-md-11">
+                            <div class="messages__item  messages__item--visitor">
+                                &#128075&#128075 Hola &#128075&#128075. Soy un Asistente Virtual que está a su disposición para 
+                                responder inquietudes relacionadas con matrículas, homologaciones y otros temas relacionados como:  
+                                costes, formas de pago, modalidades de estudio, entre otros &#129299. Para interactuar conmigo 
+                                digite el número de cada una de las opciones que se le presentan en el menu siguiente o en su 
+                                defecto realize una pregunta bien redactada en el campo de texto .
+                                <ul class="ul1">
+                                    <li class="li1"> 1 - Requisitos de inscripción</li>
+                                    <li class="li1"> 2 - Matrículas</li> 
+                                    <li class="li1">3 - Tipos de posgrados</li>
+                                    <li class="li1">4 - Listado de posgrados</li>
+                                    <li class="li1">5 - Posgrados de la Carrera de Computación</li>
+                                    <li class="li1">6 - Formas de pago</li>
+                                    <li class="li1">7 - Duración de los posgrados</li>
+                                    <li class="li1">8 - Modalidades de estudio</li>
+                                    <li class="li1">9 - Calendario académico</li>
+                                    <li class="li1">10 - Homologaciones</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- <div class="bt">
+                    <button class="boton__articulos" onclick="mostrarDoc();">Artículos del Reglamento de Régimen
+                        Académico</button>
+                </div> -->
+                <div class="chatbox__footer">
+                    <!-- caja de texto donde el usuario ingresa la pregunta --> 
+                    <input class="enviar" type="text" placeholder="Realice su pregunta">
+                    <button class="chatbox__send--footer send__button">
+                        <img src="../static/images/send.png" alt="enviar-btn">
+
+                    </button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button id="uno" onclick="ocultar();">
+                    <span><img src="/static/images/burbuja.png" /></span>
+                    Resuelva sus dudas
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="doc" class="articulos">
+        <div class="encabezado">
+            <div class="boton_x">
+                <button class="cerrar_encabezado" onclick="borrarDoc();"> cerrar
+                </button>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+    <script src="/static/css/app.js"></script>
+
+</body>
+
+</html>
